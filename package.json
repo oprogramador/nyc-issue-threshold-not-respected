@@ -5,21 +5,9 @@
   "main": "index.js",
   "scripts": {
     "coverage": "nyc report",
+    "check-coverage": "nyc --check-coverage --lines 40 yarn test",
     "test": "mocha test.js",
     "test-spec": "nyc --reporter=none yarn test"
-  },
-  "nyc": {
-    "check-coverage": true,
-    "watermarks": {
-      "lines": [
-        30,
-        40
-      ],
-      "statements": [
-        30,
-        40
-      ]
-    }
   },
   "author": "",
   "license": "MIT",
