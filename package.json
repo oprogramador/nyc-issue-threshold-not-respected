@@ -1,0 +1,31 @@
+{
+  "name": "nyc-issue-threshold-not-respected",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "nyc report",
+    "test": "mocha test.js",
+    "test-spec": "nyc --reporter=none yarn test"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "watermarks": {
+      "lines": [
+        30,
+        40
+      ],
+      "statements": [
+        30,
+        40
+      ]
+    }
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
+  }
+}
